@@ -13,7 +13,7 @@ public class Recursive {
     public int BinDec(int num){                                          
         if (num > 0) {                                    
             int expo = (int) Math.pow(2, cont);       
-            int cambio = n % 10;                            
+            int cambio = num % 10;                            
             cont++;                                    
             return cambio * expo + BinDec(num / 10);                                                        
         } else
