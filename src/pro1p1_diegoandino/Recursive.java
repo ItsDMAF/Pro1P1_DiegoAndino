@@ -10,12 +10,12 @@ public class Recursive {
     
     //NO ME DIO EL TIEMPO DE HACER LAS EXPLICACIONES TE AHORRO EL TIEMPO...
 //------------------------------------------------------------------------------
-    public int BinDec(int n){                                          
-        if (n > 0) {                                    
-            int e = (int) Math.pow(2, cont);       
-            int i = n % 10;                            
+    public int BinDec(int num){                                          
+        if (num > 0) {                                    
+            int expo = (int) Math.pow(2, cont);       
+            int cambio = n % 10;                            
             cont++;                                    
-            return i * e + BinDec(n / 10);                                                        
+            return cambio * expo + BinDec(num / 10);                                                        
         } else
     return 0;                                      
     }
@@ -24,13 +24,13 @@ public class Recursive {
         this.cont = 0;
     }
 //------------------------------------------------------------------------------
-    public String DecBin(int n){
-        if (n > 1) {
-            String res = n % 2 + " ";
-            return DecBin(n / 2) + res;
+    public String DecBin(int num){
+        if (num > 1) {
+            String res = num % 2 + " ";
+            return DecBin(num / 2) + res;
         } 
         else{
-            if(n == 1){
+            if(num == 1){
                 return 1 + " ";
             }else
                 return 0 + " ";
